@@ -54,6 +54,15 @@ class ProductCard extends StatelessWidget {
                         fit: BoxFit.cover,
                         width: double.infinity,
                         height: double.infinity,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Center(
+                            child: Icon(
+                              Icons.image_not_supported,
+                              size: 35,
+                              color: Colors.grey,
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),
