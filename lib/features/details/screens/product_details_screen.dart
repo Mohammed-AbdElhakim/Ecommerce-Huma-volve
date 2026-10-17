@@ -1,3 +1,4 @@
+import 'package:ecommerce_app_huma_volve/features/details/widgets/share_product_button.dart';
 import 'package:ecommerce_app_huma_volve/features/home/domain/entities/product_entity.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppTheme.background,
+
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -57,6 +59,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 ),
                 onPressed: () {},
               ),
+              const SizedBox(width: 8),
+              ShareProductButton(productId: widget.product.id!),
               const SizedBox(width: 8),
             ],
             flexibleSpace: FlexibleSpaceBar(
